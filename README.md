@@ -11,6 +11,7 @@ Built an Olx like website using Django 4.0, Tailwind CSS v 2.2.16, HTML5, Javasc
 - Newly registered user can update his/her profile in the update profile page. This page will ask him/her to upload a profile picture and enter their contact number and their data get's saved in the Profiles model.
 - Also there is an admin dashboard, where entire control of the website is done by the admin. Accessible only by the admin and no other registered user.
 - Also user can search products of his/her choice on the view products page. 
+- Made use of Pagination.
 - Logout option.
 
 Implementation video : https://drive.google.com/file/d/1NVy3SqYCdxozVUEhAmY1osrOYCa5Y_Jh/view?usp=sharing

@@ -13,4 +13,4 @@ Built an Olx like website using Django 4.0, Tailwind CSS v 2.2.16, HTML5, Javasc
 - Also user can search products of his/her choice on the view products page. 
 - Logout option.
 
-Implementation video : https://drive.google.com/file/d/1HdG89b_J7g1q3wsODgNYqwI9zptEP1SL/view?usp=sharing
+Implementation video : https://drive.google.com/file/d/1NVy3SqYCdxozVUEhAmY1osrOYCa5Y_Jh/view?usp=sharing

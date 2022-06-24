@@ -12,4 +12,5 @@ Built an Olx like website using Django 4.0, Tailwind CSS v 2.2.16, HTML5, Javasc
 - Also there is an admin dashboard, where entire control of the website is done by the admin. Accessible only by the admin and no other registered user.
 - Also user can search products of his/her choice on the view products page. 
 - Logout option.
+
 Implementation video : https://drive.google.com/file/d/1HdG89b_J7g1q3wsODgNYqwI9zptEP1SL/view?usp=sharing

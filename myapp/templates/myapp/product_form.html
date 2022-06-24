@@ -1,0 +1,43 @@
+{% extends 'myapp/base.html'%}
+{% block content %}
+<h1 class="text-2xl font-bold m-10">➕Add Product</h1>
+<form class="w-3/5 bg-white shadow-md m-10 px-8 py-8" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="">Product Name :</label>
+        <div class="shadow appearance-none border w-1/4 rounded py-2 px-3 mr-10 text-gray-700">
+            {{form.name}}
+        </div>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="">Product Price :</label>
+        <div class="shadow appearance-none border w-1/4 rounded py-2 px-3 mr-10 text-gray-700">
+            {{form.price}}
+        </div>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="">Product Description :</label>
+        <div class="shadow appearance-none border w-1/4 rounded py-2 px-3 mr-10 text-gray-700">
+            {{form.desc}}
+        </div>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="">Product Image :</label>
+        <div class="shadow appearance-none border w-1/4 rounded py-2 px-3 mr-10 text-gray-700">
+            {{form.image}}
+        </div>
+    </div>
+    <div class="mb-4">
+        <div class="hidden shadow appearance-none border w-1/4 rounded py-2 px-3 mr-10 text-gray-700">
+            {{form.seller_name}}
+        </div>
+    </div>
+    <!-- <input placeholder="price" type="text" name="price" id="price">
+    <input placeholder="desc" type="text" name="desc" id="desc"> -->
+    <!-- <input type="file" accept="image/*" name="upload" id="upload"> -->
+    <div class="mb-4">
+        <input class="bg-green-500 text-white px-5 py-2" type="submit" name="Add Product" value="Add Product" id="">
+    </div>
+    <!-- <input type="submit" name="Add Product" value="Add Product" id=""> -->
+</form>
+{% endblock %}

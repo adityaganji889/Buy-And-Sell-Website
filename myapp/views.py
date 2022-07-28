@@ -121,7 +121,8 @@ def my_listings(request):
 
 @csrf_exempt
 def create_checkout_session(request,id):
-    product = get_object_or_404(Product, pk=id)
+    products = Product.objects.exclude(seller_name=request.user)
+    product = get_object_or_404(products, pk=id)
     stripe.api_key = settings.STRIPE_SECRET_KEY
     checkout_session = stripe.checkout.Session.create(
         customer_email = request.user.email,

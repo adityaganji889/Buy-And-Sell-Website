@@ -1,4 +1,4 @@
-# Buy & Sell Website
+# Buy And Sell Website
 Built an Olx like website using Django 4.0, DBSqlite 3 Database, Tailwind CSS v 2.2.16, HTML5, Javascript, Node.js, Razor Pay Payment Gateway using Stripe.
  It's main functionalities include:
 - Login/Register user.

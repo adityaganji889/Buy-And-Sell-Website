@@ -68,6 +68,7 @@ def add_product(request):
        seller_name = request.user
        product = Product(name=name,price=price,desc=desc,image=image,seller_name=seller_name)
        product.save()
+       return redirect('/myapp/products/')
     return render(request,'myapp/addproduct.html')
 
 # CLass based view for creating a product

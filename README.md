@@ -20,4 +20,4 @@ Built an Olx like website an e-commerce portal dealing with buying and selling o
   - Backend : Django 4.0, DBSqlite3, Node.js. 
   - Payment Gateway : Stripe API.
 
-Implementation video : https://drive.google.com/file/d/1BJdrI8Cx-lgly079WXs_5mcD_Pvdd0ki/view?usp=sharing
+Implementation video : https://drive.google.com/file/d/14KCI0WFC-xRenOxGJkJWaLEeO3RK558e/view?usp=sharing

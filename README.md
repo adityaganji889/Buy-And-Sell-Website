@@ -13,10 +13,11 @@ Built an Olx like website an e-commerce portal dealing with buying and selling o
 - Also user can search products of his/her choice on the view products page. 
 - After successful payment by a user to a seller's product, seller/admin will be able to delete the product from the main listings if the product is out of stock in that specific seller's inventory.
 - Made use of Pagination.
+- Also Admin can send receipts of successful payments by a particular user to their respective emails.
 - Logout option.
 - Tech Stack Used :
   - Frontend : HTML-5, Tailwind CSS v2.2.16, Javascript ES-6.
   - Backend : Django 4.0, DBSqlite3, Node.js. 
   - Payment Gateway : Stripe API.
 
-Implementation video : https://drive.google.com/file/d/1NVy3SqYCdxozVUEhAmY1osrOYCa5Y_Jh/view?usp=sharing
+Implementation video : https://drive.google.com/file/d/1BJdrI8Cx-lgly079WXs_5mcD_Pvdd0ki/view?usp=sharing

@@ -1,15 +1,26 @@
 {% extends 'myapp/base.html' %}
 {% block content %}
-<form method="post" enctype="multipart/form-data" class="bg-white shadow-md m-10 w-3/5 rounded px-8 pt-6 pb-8 mb-4">
+{% load static %}
+<div class="text-2xl ml-10 p-10 font-bold">🧑Create Profile
+    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 font-semibold">
+        Newly registered user can add their photo and contact number here only for the first time. For updating profile, already registered users have to contact admin.
+    </p>
+</div>
+<form method="post" enctype="multipart/form-data" class="flex bg-white shadow-md m-10 w-3/5 rounded px-8 pt-6 pb-8 mb-4">
     {% csrf_token %}
-    <div class="mb-4">
-       <label for="">Upload profile image</label>
-       <input class="py-2" placeholder="Upload a clear profile image" type="file" accept="image/*" name="upload" id="upload">
+    <div>
+        <img class="mt-3 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0" src="{% static 'myapp/images/profile.jpg' %}" alt='job hunt' style='width: 100%;' />
     </div>
-    <div class="mb-4">
-        <label for="">Contact Number : </label>
-        <input class="shadow appearance-none border rounded py-2 px-3 mr-10 text-gray-700" placeholder="Enter your contact number" type="text"  name="contact_number" id="contact_number">
+    <div>
+        <div class="mb-4">
+            <label for="">Upload profile image</label>
+            <input class="py-2" placeholder="Upload a clear profile image" type="file" accept="image/*" name="upload" id="upload">
+         </div>
+         <div class="mb-4">
+             <label for="">Contact Number : </label>
+             <input class="shadow appearance-none border rounded py-2 px-3 mr-10 text-gray-700" placeholder="Enter your contact number" type="text"  name="contact_number" id="contact_number">
+         </div>
+         <input type="submit" class="bg-green-500 hover:bg-green-700 text-white px-5 py-2" name="Add" value="Add">
     </div>
-    <input type="submit" class="bg-green-500 text-white px-5 py-2" name="Add" value="Add">
 </form>
 {% endblock %}

@@ -1,40 +1,100 @@
 {% load static %}
 <html>
     <head>
-        <title>
-        </title>
-        <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
-    </head>
-    <body>
-        <nav class="bg-white shadow-lg">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex justify-between">
-                    <div class="flex space-x-7">
-                        <div>
-                            <a href ='#' class="flex items-center px-2 py-4">
-                                <img class="h-8 w-8" src="{% static 'myapp/images/shopping.png' %}" alt="">
-                                <span class="text-gray-500 font-semibold text-lg">Buy&Sell</span>
-                            </a>
-                        </div>
-                        <div class="items-center flex space-x-1">
-                          <a href="{% url 'myapp:products' %}" class="py-4 px-2 text-gray-500 font-semibold border-b-4 border-green-500">Home</a>
-                          <a href="{% url 'myapp:add_product' %}" class="py-4 px-2 text-gray-500 font-semibold">Post Ad</a>
-                          <a href="{% url 'myapp:products' %}" class="py-4 px-2 text-gray-500 font-semibold">View Products</a>
-                          {% if user.is_authenticated %}
-                           <a href="{% url 'users:logout'%}" class="py-4 px-20 text-gray-500 font-semibold">Logout</a>
-                           <a href="{% url 'users:profile'%}" class="py-4 px-20 text-gray-500 font-semibold">Profile</a>
-                           <a href="{% url 'users:create_profile' %}" class="py-4 px-10 text-gray-500 font-semibold">Update Profile</a>
-                           <a href="{% url 'myapp:mylistings' %}" class="py-4 text-gray-500 font-semibold">My Listings</a>
-                          {% else %}
-                           <a href="{% url 'users:login'%}" class="py-4 px-40 text-gray-500 font-semibold">Login</a>
-                          {% endif %}
-                        </div>
-                    </div>
-                </div>
+    <link rel="icon" href="{% static 'myapp/images/shopping.png' %}" />
+    <title>Buy and Sell Website</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}" />
+    <style>
+        .active{
+            border-bottom-width: 4px;
+            --tw-border-opacity: 1;
+            border-color: rgba(16, 185, 129, var(--tw-border-opacity));
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-7">
+            <div>
+              <a href="{% url 'myapp:home' %}" class="flex items-center px-2 py-4">
+                <img
+                  class="h-8 w-8"
+                  src="{% static 'myapp/images/shopping.png' %}"
+                  alt=""
+                />
+                <span class="text-gray-500 font-semibold text-lg"
+                  >Buy&Sell</span
+                >
+              </a>
             </div>
-         </nav>
-        {% block content %}
+            <div class="items-center flex space-x-1">
+              <a
+                href="{% url 'myapp:home' %}"
+                class="py-4 px-2 text-gray-500 font-semibold ac"
+                >Home</a
+              >
+              <a
+                href="{% url 'myapp:add_product' %}"
+                class="py-4 px-2 text-gray-500 font-semibold ac"
+                >Post Ad</a
+              >
+              <a
+                href="{% url 'myapp:products' %}"
+                class="py-4 px-2 text-gray-500 font-semibold ac"
+                >View Products</a
+              >
+              <a
+                href="{% url 'myapp:contact' %}"
+                class="py-4 px-2 text-gray-500 font-semibold ac"
+                >Contact</a
+              >
+              {% if user.is_authenticated %}
+              <a
+                href="{% url 'users:logout'%}"
+                class="py-4 px-10 text-gray-500 font-semibold ac"
+                >Logout</a
+              >
+              <a
+                href="{% url 'users:profile'%}"
+                class="py-4 px-10 text-gray-500 font-semibold ac"
+                >Profile</a
+              >
+              <a
+                href="{% url 'users:create_profile' %}"
+                class="py-4 px-10 text-gray-500 font-semibold ac"
+                >Create Profile</a
+              >
+              <a
+                href="{% url 'myapp:mylistings' %}"
+                class="py-4 px-10 text-gray-500 font-semibold ac"
+                >My Listings</a
+              >
+              {% else %}
+              <a
+                href="{% url 'users:login'%}"
+                class="py-4 px-10 text-gray-500 font-semibold ac"
+                >Login</a
+              >
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    {% block content %} 
 
-        {% endblock %}
-    </body>
+    {% endblock %}
+  </body>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    $(function () {
+      $(".ac").each(function () {
+        if ($(this).prop("href") == window.location.href) {
+          $(this).addClass("active");
+        }
+      });
+    });
+  </script>
 </html>

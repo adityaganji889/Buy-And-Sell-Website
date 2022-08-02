@@ -17,7 +17,10 @@ import json
 import stripe
 # Create your views here.
 def index(request):
-    return HttpResponse('Hello World')
+    return render(request,'myapp/home.html')
+
+def contact(request):
+    return render(request,'myapp/contact.html')
 
 def products(request):
     page_obj = products = Product.objects.all()

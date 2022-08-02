@@ -12,7 +12,7 @@ Built an Olx like website an e-commerce portal dealing with buying and selling o
 - Also there is an admin dashboard, where entire control of the website is done by the admin. Accessible only by the admin and no other registered user.
 - Also user can search products of his/her choice on the view products page. 
 - After successful payment by a user to a seller's product, seller/admin will be able to delete the product from the main listings if the product is out of stock in that specific seller's inventory.
-- Made use of Pagination.
+- Made use of Pagination allowing 3 items per page.
 - Also Admin can send receipts of successful payments by a particular user to their respective emails.
 - Logout option.
 - Tech Stack Used :

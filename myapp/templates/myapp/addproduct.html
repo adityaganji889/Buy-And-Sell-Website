@@ -1,5 +1,6 @@
 {% extends 'myapp/base.html'%}
 {% block content %}
+{% load static %}
 <h1 class="text-2xl font-bold m-10">➕Add Product</h1>
 <form class="flex w-3/5 bg-white shadow-md m-10 px-8 py-8" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
